@@ -1098,10 +1098,15 @@ export class FontData<C extends CharOptions, V extends VariantData<C>, D extends
    * @return {string}                The prefixed name for the file
    */
   protected dynamicFileName(dynamic: DynamicFile): string {
-    const prefix = (!dynamic.extension ? this.options.dynamicPrefix :
-                    this.CLASS.dynamicExtensions.get(dynamic.extension).prefix);
-    return (dynamic.file.match(/^(?:[\/\[]|[a-z]+:\/\/|[a-z]:)/i) ? dynamic.file :
-      prefix + '/' + dynamic.file.replace(/(?<!\.js)$/, '.js'));
+    const prefix = !dynamic.extension
+      ? this.options.dynamicPrefix
+      : this.CLASS.dynamicExtensions.get(dynamic.extension).prefix;
+    if (dynamic.file.match(/^(?:[/[]|[a-z]+:\/\/|[a-z]:)/i)) {
+      return dynamic.file;
+    } else {
+      const file = dynamic.file.endsWith('.js') ? dynamic.file : dynamic.file + '.js';
+      return prefix + '/' + file;
+    }
   }
 
   /**
