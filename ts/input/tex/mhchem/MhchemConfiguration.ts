@@ -49,6 +49,14 @@ const MhchemMethods: {[key: string]: ParseMethod} = {
     } catch (err) {
       throw new TexError(err[0], err[1]);
     }
+    if (tex) {
+      if (!tex.startsWith('\\allowbreak')) {
+        tex = '\\allowbreak' + tex;
+      }
+      if (!tex.endsWith('\\allowbreak')) {
+        tex = tex + '\\allowbreak';
+      }
+    }
     parser.string = tex + parser.string.substring(parser.i);
     parser.i = 0;
   },
