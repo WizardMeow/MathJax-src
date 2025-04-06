@@ -12,11 +12,11 @@ importers:
         specifier: ^0.8.10
         version: 0.8.10
       mathjax-modern-font:
-        specifier: ^4.0.0-beta.5
-        version: 4.0.0-beta.5
+        specifier: ^4.0.0-beta.7
+        version: 4.0.0-beta.7
       mhchemparser:
-        specifier: ^4.2.1
-        version: 4.2.1
+        specifier: WizardMeow/mhchemParser#feat/allowbreak
+        version: https://codeload.github.com/WizardMeow/mhchemParser/tar.gz/b5d6b191483c97b8dbf8b6cae7df74eaae117291
       mj-context-menu:
         specifier: ^0.9.1
         version: 0.9.1
@@ -38,7 +38,7 @@ importers:
         version: 5.0.5
       terser-webpack-plugin:
         specifier: ^5.3.10
-        version: 5.3.10(webpack@5.91.0(webpack-cli@5.1.4))
+        version: 5.3.10(webpack@5.91.0)
       tslint:
         specifier: ^6.1.3
         version: 6.1.3(typescript@5.4.5)
@@ -553,14 +553,15 @@ packages:
     resolution: {integrity: sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==}
     engines: {node: 14 || >=16.14}
 
-  mathjax-modern-font@4.0.0-beta.5:
-    resolution: {integrity: sha512-+OiJ6czV4cNRnIAIyqvrwjfetTvWeOMN25jFxihiK+PNrqWjltNbx2+adBwngsEETIzymzIS6Qve0irSxkcR4w==}
+  mathjax-modern-font@4.0.0-beta.7:
+    resolution: {integrity: sha512-mGrlxuFPRoHpGYyRaXJpfyM9k77XCpH11lIVLO7+VNTFJXIeqnMXv+AGFiYL/GftQpdhPlCg4zqd/JXlse9S0A==}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
-  mhchemparser@4.2.1:
-    resolution: {integrity: sha512-kYmyrCirqJf3zZ9t/0wGgRZ4/ZJw//VwaRVGA75C4nhE60vtnIzhl9J9ndkX/h6hxSN7pjg/cE0VxbnNM+bnDQ==}
+  mhchemparser@https://codeload.github.com/WizardMeow/mhchemParser/tar.gz/b5d6b191483c97b8dbf8b6cae7df74eaae117291:
+    resolution: {tarball: https://codeload.github.com/WizardMeow/mhchemParser/tar.gz/b5d6b191483c97b8dbf8b6cae7df74eaae117291}
+    version: 4.2.2
 
   mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
@@ -1080,17 +1081,17 @@ snapshots:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))':
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.91.0)':
     dependencies:
       webpack: 5.91.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.91.0)
 
-  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))':
+  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.91.0)':
     dependencies:
       webpack: 5.91.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.91.0)
 
-  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))':
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack@5.91.0)':
     dependencies:
       webpack: 5.91.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.91.0)
@@ -1404,11 +1405,11 @@ snapshots:
 
   lru-cache@10.0.1: {}
 
-  mathjax-modern-font@4.0.0-beta.5: {}
+  mathjax-modern-font@4.0.0-beta.7: {}
 
   merge-stream@2.0.0: {}
 
-  mhchemparser@4.2.1: {}
+  mhchemparser@https://codeload.github.com/WizardMeow/mhchemParser/tar.gz/b5d6b191483c97b8dbf8b6cae7df74eaae117291: {}
 
   mime-db@1.52.0: {}
 
@@ -1614,7 +1615,7 @@ snapshots:
 
   tapable@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(webpack@5.91.0(webpack-cli@5.1.4)):
+  terser-webpack-plugin@5.3.10(webpack@5.91.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
@@ -1714,9 +1715,9 @@ snapshots:
   webpack-cli@5.1.4(webpack@5.91.0):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))
-      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))
-      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4(webpack@5.91.0))(webpack@5.91.0(webpack-cli@5.1.4))
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.91.0)
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.91.0)
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack@5.91.0)
       colorette: 2.0.20
       commander: 10.0.1
       cross-spawn: 7.0.3
@@ -1758,7 +1759,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(webpack@5.91.0(webpack-cli@5.1.4))
+      terser-webpack-plugin: 5.3.10(webpack@5.91.0)
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     optionalDependencies:
